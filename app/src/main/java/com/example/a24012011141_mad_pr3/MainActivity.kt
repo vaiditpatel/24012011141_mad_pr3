@@ -3,6 +3,8 @@ package com.example.a24012011141_mad_pr3
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.AlarmClock
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         implicitIntent()
 
+
     }
     fun implicitIntent(){
         findViewById<Button>(R.id.btn_Browse).setOnClickListener {Intent(Intent.ACTION_VIEW,
@@ -33,9 +36,9 @@ class MainActivity : AppCompatActivity() {
              intent.setData("tel:$number".toUri())
              startActivity(intent)}
         findViewById<Button>(R.id.btn_CallLog).setOnClickListener { Intent(Intent()) }
-        findViewById<Button>(R.id.btn_Gallary).setOnClickListener {  }
-        findViewById<Button>(R.id.btn_Camera).setOnClickListener {  }
-        findViewById<Button>(R.id.btn_Alarm).setOnClickListener {  }
+        findViewById<Button>(R.id.btn_Gallary).setOnClickListener { Intent(Intent()) }
+        findViewById<Button>(R.id.btn_Camera).setOnClickListener { Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { it } }
+        findViewById<Button>(R.id.btn_Alarm).setOnClickListener {  Intent(AlarmClock.ACTION_SHOW_ALARMS).also { it } }
 
 
         fun explicitIntent(){
