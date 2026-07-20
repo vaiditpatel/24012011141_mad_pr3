@@ -1,8 +1,13 @@
 package com.example.a24012011141_mad_pr3
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -15,6 +20,26 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        implicitIntent()
+
+    }
+    fun implicitIntent(){
+        findViewById<Button>(R.id.btn_Browse).setOnClickListener {Intent(Intent.ACTION_VIEW,
+            Uri.parse(findViewById<EditText>(R.id.editTextText).text.toString())).also { startActivity(it) }  }
+        findViewById<Button>(R.id.btn_Call).setOnClickListener { val number = findViewById<EditText>(R.id.editTextText2).text.toString()
+        val intent = Intent(Intent.ACTION_DIAL)
+             intent.setData("tel:$number".toUri())
+             startActivity(intent)}
+        findViewById<Button>(R.id.btn_CallLog).setOnClickListener { Intent(Intent()) }
+        findViewById<Button>(R.id.btn_Gallary).setOnClickListener {  }
+        findViewById<Button>(R.id.btn_Camera).setOnClickListener {  }
+        findViewById<Button>(R.id.btn_Alarm).setOnClickListener {  }
+
+
+        fun explicitIntent(){
+            findViewById<Button>(R.id.btn_Login).setOnClickListener { }
         }
     }
 }
