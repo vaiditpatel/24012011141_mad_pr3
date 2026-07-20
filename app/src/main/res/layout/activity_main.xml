@@ -212,6 +212,7 @@
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <Button
+
         android:id="@+id/button7"
         android:layout_width="100dp"
         android:layout_height="48dp"
