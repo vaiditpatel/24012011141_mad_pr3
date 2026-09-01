@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <!-- Web URL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Web Url:"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/urlEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textUri"
+                android:text="https://www.google.com"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/browseButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#6750A4"
+                android:text="Browse"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- Phone Number -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Phone No.:"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="phone"
+                android:text="9999999999"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/callButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#6750A4"
+                android:text="Call"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- Call Log -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Call Log:"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/callLogButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#6750A4"
+                android:text="Call Log"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- Gallery -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gallery:"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/galleryButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#6750A4"
+                android:text="Gallery"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- Camera -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Camera:"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/cameraButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#6750A4"
+                android:text="Camera"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- Alarm -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Alarm:"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/alarmButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#6750A4"
+                android:text="Alarm"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- Login -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Login:"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/loginScreenButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#6750A4"
+                android:text="Login"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
