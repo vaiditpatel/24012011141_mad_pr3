@@ -5,6 +5,24 @@
 This project serves as a comprehensive guide and boilerplate for handling various device-level actions and cross-activity navigation in Android using modern APIs (like `ActivityResultContracts`) and runtime permission requests.
 
 ---
+---
+
+## Application Demo
+
+<table width="100%">
+<tr>
+<td width="50%" valign="top">
+
+### 🎥 Demo
+
+https://github.com/user-attachments/assets/cc530a90-c455-459a-a99b-1f31817fa38f
+
+</td>
+</tr>
+</table>
+
+---
+
 
 ## 📱 Features Implemented
 
